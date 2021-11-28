@@ -1,6 +1,6 @@
 {
 	"name": "@dom-for-node/dom-scroll",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "a customisable bindable scrollbar",
 	"main": "dom-scroll.model.js",
 	"scripts": {
