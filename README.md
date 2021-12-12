@@ -7,12 +7,21 @@ install
 npm install @dom-for-node/dom-scroll
 ```
 
-Use
+inport
 ```
 const _dom=require('dom-for-node');
 
 // Model declaration must strictly use the same dom-for-node instance.
 require('@dom-for-node/dom-scroll')(_dom);
+
+```
+
+use
+```
+const _dom=require('dom-for-node');
+
+
+let bar = _dom('dom-scroll',config,className);
 
 ```
 
