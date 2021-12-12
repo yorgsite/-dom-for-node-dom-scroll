@@ -1,10 +1,11 @@
-(function(_dom){
-	if(_dom.has('dom-scroll'))return;
+module.exports=function(_dom){
 	"use strict";
+	if(_dom.has('dom-scroll'))return;
+	// const {Listener,Listening}=require('../tools');
 	/**
-	Component 'dom-scroll'.
-	@param {object{onChange:function,direction:0|1=1,}} config : ...
-	@param {string} [className] : Use a custom css class.
+	Component 'dom-scroll' share model handler public attr & methods.
+	@param {object(onChange:function,direction:0|1=1,)} config : ...
+	@param {string} [className] : Use a custom css class (exemple can be taken on .dom-scroll_default).
 	*/
 	_dom.model('dom-scroll',function(tagName,config,className){
 		let doms={};
@@ -264,6 +265,7 @@
 			});
 		}
 		// --------- io
+		/**@attr {number} current scroll value */
 		get value(){
 			return this._value;
 		}
@@ -272,6 +274,7 @@
 			this.refreshValue();
 			this.refreshView();
 		}
+		/**@attr {number} the container size */
 		get outerSize(){
 			return this._outerSize;
 		}
@@ -280,6 +283,7 @@
 			this.refreshValue();
 			this.refreshView();
 		}
+		/**@attr {number} the content size */
 		get innerSize(){
 			return this._outerSize;
 		}
@@ -289,6 +293,7 @@
 			this.refreshView();
 		}
 		
+		/**@attr {number=0|1} horizontal=0 vertical=1 */
 		get direction(){
 			return this.dir;
 		}
@@ -309,6 +314,7 @@
 			});
 			requestAnimationFrame(()=>this.refreshView());
 		}
+		/**@attr {HTMLElement} attached element to fit scrollbar size */
 		get target(){
 			return this._target;
 		}
@@ -324,6 +330,7 @@
 				this._observer.observe(this._target);
 			}
 		}
+		/**@attr {number} scrollbar size (px) */
 		get size(){
 			return this._size;
 		}
@@ -372,6 +379,7 @@
 		correctValue(value){
 			return Math.max(0,Math.min(this._innerSize-this._outerSize,value));
 		}
+
 		tryChange(newValue){
 			newValue=this.correctValue(newValue);
 			if(this._value!==newValue){
@@ -389,6 +397,10 @@
 		}
 
 		// --------- publics
+		/**
+		 * increment value by 1 step
+		 * @returns current value;
+		 */
 		incr(){
 			this.tryChange(this._value+(this.step||1));
 			return this._value;
@@ -401,15 +413,15 @@
 		}
 		setSliceSize(){
 		}
-		setOffset(){
+		/**
+		 * 
+		 * @param {*} value the new offset value
+		 */
+		setOffset(value){
+			this.tryChange(value);
 		}
 		enable(){
 		}
 	};
 
-})(function(global){
-	if(!global._dom)try{global._dom=_dom;}catch(e){};
-	if(!global._dom)try{global._dom=require('dom-for-node');}catch(e){};
-	if(!global._dom)throw('\n_dom model "dom-scroll" declaration Error:\n_dom is not defined.')
-	return global._dom;
-}(this));
+};

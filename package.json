@@ -25,5 +25,6 @@
 	"bugs": {
 		"url": "https://github.com/yorgsite/-dom-for-node-dom-scroll/issues"
 	},
-	"homepage": "https://github.com/yorgsite/-dom-for-node-dom-scroll#readme"
+	"homepage": "https://github.com/yorgsite/-dom-for-node-dom-scroll#readme",
+	"dependencies": {}
 }
