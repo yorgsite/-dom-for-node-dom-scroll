@@ -45,31 +45,51 @@ Component 'dom-scroll' share model handler public attr & methods.
  
 <hr/>
  
-+ ### <a name="value"></a> attr **value**<br/><br/>**use** : domScrollModel.value `number` 
++ ### <a name="value"></a> attr **value**
+&emsp;
+&emsp;**use** : domScrollModel.value `number` 
 <hr/>
  
-+ ### <a name="outerSize"></a> attr **outerSize**<br/><br/>**use** : domScrollModel.outerSize `number` 
++ ### <a name="outerSize"></a> attr **outerSize**
+&emsp;
+&emsp;**use** : domScrollModel.outerSize `number` 
 <hr/>
  
-+ ### <a name="innerSize"></a> attr **innerSize**<br/><br/>**use** : domScrollModel.innerSize `number` 
++ ### <a name="innerSize"></a> attr **innerSize**
+&emsp;
+&emsp;**use** : domScrollModel.innerSize `number` 
 <hr/>
  
-+ ### <a name="direction"></a> attr **direction**<br/><br/>**use** : domScrollModel.direction `number=0|1` 
++ ### <a name="direction"></a> attr **direction**
+&emsp;
+&emsp;**use** : domScrollModel.direction `number=0|1` 
 <hr/>
  
-+ ### <a name="target"></a> attr **target**<br/><br/>**use** : domScrollModel.target `HTMLElement` 
++ ### <a name="target"></a> attr **target**
+&emsp;
+&emsp;**use** : domScrollModel.target `HTMLElement` 
 <hr/>
  
-+ ### <a name="size"></a> attr **size**<br/><br/>**use** : domScrollModel.size `number` 
++ ### <a name="size"></a> attr **size**
+&emsp;
+&emsp;**use** : domScrollModel.size `number` 
 <hr/>
  
-+ ### <a name="incr"></a> method **incr**<br/><br/>**use** : domScrollModel.incr()
++ ### <a name="incr"></a> method **incr**
+&emsp;
+&emsp;**use** : domScrollModel.incr()
 <hr/>
  
-+ ### <a name="decr"></a> method **decr**<br/><br/>**use** : domScrollModel.decr()
++ ### <a name="decr"></a> method **decr**
+&emsp;
+&emsp;**use** : domScrollModel.decr()
 <hr/>
  
-+ ### <a name="setOffset"></a> method **setOffset**<br/><br/>**use** : domScrollModel.setOffset( **value** )<br/> <br/>   + **param** : value `*` <br/>the new offset value
++ ### <a name="setOffset"></a> method **setOffset**
+&emsp;
+&emsp;**use** : domScrollModel.setOffset( **value** )
+&emsp; 
+&emsp;   + **param** : value `*` <br/>the new offset value
  
 [▲](#main_menu)
 <hr/>
