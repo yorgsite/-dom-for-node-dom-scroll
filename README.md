@@ -1,4 +1,4 @@
-# -dom-for-node-dom-scroll
+# @dom-for-node/dom-scroll
 a customisable bindable scrollbar with _dom.js.
 
 
@@ -7,7 +7,7 @@ install
 npm install @dom-for-node/dom-scroll
 ```
 
-inport
+import
 ```
 const _dom=require('dom-for-node');
 

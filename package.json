@@ -26,5 +26,7 @@
 		"url": "https://github.com/yorgsite/-dom-for-node-dom-scroll/issues"
 	},
 	"homepage": "https://github.com/yorgsite/-dom-for-node-dom-scroll#readme",
-	"dependencies": {}
+	"dependencies": {
+		"@dom-for-node/tools": "0.0.2"
+	}
 }

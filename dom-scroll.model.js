@@ -1,7 +1,7 @@
 module.exports=function(_dom){
 	"use strict";
 	if(_dom.has('dom-scroll'))return;
-	// const {Listener,Listening}=require('../tools');
+	const {Listener}=require('@dom-for-node/tools/src/core/Listener');
 	/**
 	Component 'dom-scroll' share model handler public attr & methods.
 	@param {object(onChange:function,direction:0|1=1,)} config : ...
@@ -117,6 +117,7 @@ module.exports=function(_dom){
 	*/
 	class DomScrollModel{
 		constructor(scope,doms){
+			
 			this.tagName='dom-scroll';
 			this.scope=scope;
 			this.doms=doms;//horizontal,vertical
@@ -130,6 +131,7 @@ module.exports=function(_dom){
 			this.swiftValue=false;
 			this._target=null;
 			this._observer=null;
+			this._listener=new Listener(['change']);
 			this.ref={
 				css:['horizontal','vertical'],
 				xy:['x','y'],
@@ -188,7 +190,9 @@ module.exports=function(_dom){
 			[	'setListSize',
 				'setSliceSize',
 				'setOffset',
-				'enable'
+				'enable',
+				'on',
+				'off'
 			].forEach(k=>{
 				this.doms.root[k]=(...args)=>this[k](...args);
 			});
@@ -385,6 +389,7 @@ module.exports=function(_dom){
 			if(this._value!==newValue){
 				this._value=newValue;
 				this.refreshView();
+				this._listener.flush('change',this);
 				if(this.config.onChange){
 					this.config.onChange(this);
 				}
@@ -400,11 +405,15 @@ module.exports=function(_dom){
 		/**
 		 * increment value by 1 step
 		 * @returns current value;
-		 */
+		*/
 		incr(){
 			this.tryChange(this._value+(this.step||1));
 			return this._value;
 		}
+		/**
+		 * decrement value by 1 step
+		 * @returns current value;
+		*/
 		decr(){
 			this.tryChange(this._value-(this.step||1));
 			return this._value;
@@ -421,6 +430,13 @@ module.exports=function(_dom){
 			this.tryChange(value);
 		}
 		enable(){
+		}
+		on(type,callback,prepend=false){
+			this._listener.on(type,callback,prepend);
+			return this;
+		}
+		off(type,callback){
+			return this._listener.off(type,callback);
 		}
 	};
 

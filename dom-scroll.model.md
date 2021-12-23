@@ -14,6 +14,7 @@ Component 'dom-scroll' share model handler public attr & methods.
 	+ [domScrollModel.target](#target)
 	+ [domScrollModel.size](#size)
 	+ [domScrollModel.incr()](#incr)
+	+ [domScrollModel.decr()](#decr)
 	+ [domScrollModel.setOffset( **value** )](#setOffset)
  
 <hr/>
@@ -22,7 +23,7 @@ Component 'dom-scroll' share model handler public attr & methods.
  
 ## <a name="dom-scroll"></a> model **dom-scroll**
  
-Component 'dom-scroll' share model handler public attr & methods.
+
  
 **use** : _dom( **'dom-scroll'** , **config** , **className** )
  
@@ -38,84 +39,37 @@ Component 'dom-scroll' share model handler public attr & methods.
  
 ## <a name="DomScrollModel"></a> class **DomScrollModel**
  
-Component 'dom-scroll' model handler.
+
  
 **use** : new DomScrollModel()
  
 <hr/>
  
-+ ### <a name="value"></a> attr **value**
- 
-current scroll value
- 
-**use** : domScrollModel.value `number` 
- 
- 
++ ### <a name="value"></a> attr **value**<br/><br/>**use** : domScrollModel.value `number` 
 <hr/>
  
-+ ### <a name="outerSize"></a> attr **outerSize**
- 
-the container size
- 
-**use** : domScrollModel.outerSize `number` 
- 
- 
++ ### <a name="outerSize"></a> attr **outerSize**<br/><br/>**use** : domScrollModel.outerSize `number` 
 <hr/>
  
-+ ### <a name="innerSize"></a> attr **innerSize**
- 
-the content size
- 
-**use** : domScrollModel.innerSize `number` 
- 
- 
++ ### <a name="innerSize"></a> attr **innerSize**<br/><br/>**use** : domScrollModel.innerSize `number` 
 <hr/>
  
-+ ### <a name="direction"></a> attr **direction**
- 
-horizontal=0 vertical=1
- 
-**use** : domScrollModel.direction `number=0|1` 
- 
- 
++ ### <a name="direction"></a> attr **direction**<br/><br/>**use** : domScrollModel.direction `number=0|1` 
 <hr/>
  
-+ ### <a name="target"></a> attr **target**
- 
-attached element to fit scrollbar size
- 
-**use** : domScrollModel.target `HTMLElement` 
- 
- 
++ ### <a name="target"></a> attr **target**<br/><br/>**use** : domScrollModel.target `HTMLElement` 
 <hr/>
  
-+ ### <a name="size"></a> attr **size**
- 
-scrollbar size (px)
- 
-**use** : domScrollModel.size `number` 
- 
- 
++ ### <a name="size"></a> attr **size**<br/><br/>**use** : domScrollModel.size `number` 
 <hr/>
  
-+ ### <a name="incr"></a> method **incr**
- 
-increment value by 1 step
- 
-**use** : domScrollModel.incr()
- 
- 
++ ### <a name="incr"></a> method **incr**<br/><br/>**use** : domScrollModel.incr()
 <hr/>
  
-+ ### <a name="setOffset"></a> method **setOffset**
++ ### <a name="decr"></a> method **decr**<br/><br/>**use** : domScrollModel.decr()
+<hr/>
  
-
- 
-**use** : domScrollModel.setOffset( **value** )
- 
-   + **param** : value `*` <br/>the new offset value
- 
- 
++ ### <a name="setOffset"></a> method **setOffset**<br/><br/>**use** : domScrollModel.setOffset( **value** )<br/> <br/>   + **param** : value `*` <br/>the new offset value
  
 [▲](#main_menu)
 <hr/>
