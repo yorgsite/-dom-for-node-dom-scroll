@@ -23,7 +23,7 @@ Component 'dom-scroll' share model handler public attr & methods.
  
 ## <a name="dom-scroll"></a> model **dom-scroll**
  
- Component 'dom-scroll' share model handler public attr & methods.
+Component 'dom-scroll' share model handler public attr & methods.
  
 **use** : _dom( **'dom-scroll'** , **config** , **className** )
  
@@ -36,6 +36,7 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; Use a custom css class (exemple can be taken on .dom-scroll_default).
  
  
+ 
 [▲](#main_menu)
 <hr/>
  
@@ -43,12 +44,14 @@ Component 'dom-scroll' share model handler public attr & methods.
  
 ## <a name="DomScrollModel"></a> class **DomScrollModel**
  
- Component 'dom-scroll' model handler.
+Component 'dom-scroll' model handler.
  
 **use** : new DomScrollModel()
  
 <hr/>
  
+
+
 + ### <a name="value"></a> attr **value**
 
 &emsp;&emsp; current scroll value
@@ -56,6 +59,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.value `number`
 <hr/>
  
+
+
 + ### <a name="outerSize"></a> attr **outerSize**
 
 &emsp;&emsp; the container size
@@ -63,6 +68,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.outerSize `number`
 <hr/>
  
+
+
 + ### <a name="innerSize"></a> attr **innerSize**
 
 &emsp;&emsp; the content size
@@ -70,6 +77,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.innerSize `number`
 <hr/>
  
+
+
 + ### <a name="direction"></a> attr **direction**
 
 &emsp;&emsp; horizontal=0 vertical=1
@@ -77,6 +86,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.direction `number=0|1`
 <hr/>
  
+
+
 + ### <a name="target"></a> attr **target**
 
 &emsp;&emsp; attached element to fit scrollbar size
@@ -84,6 +95,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.target `HTMLElement`
 <hr/>
  
+
+
 + ### <a name="size"></a> attr **size**
 
 &emsp;&emsp; scrollbar size (px)
@@ -91,6 +104,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.size `number`
 <hr/>
  
+
+
 + ### <a name="incr"></a> method **incr**
 
 &emsp;&emsp; increment value by 1 step
@@ -98,6 +113,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.incr()
 <hr/>
  
+
+
 + ### <a name="decr"></a> method **decr**
 
 &emsp;&emsp; decrement value by 1 step
@@ -105,6 +122,8 @@ Component 'dom-scroll' share model handler public attr & methods.
 &emsp;&emsp; **use** : domScrollModel.decr()
 <hr/>
  
+
+
 + ### <a name="setOffset"></a> method **setOffset**
 
 
